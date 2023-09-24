@@ -7,8 +7,7 @@ REM Target: Windows 11
 REM System: OMG, firmware 3
 REM Details:
 REM While the antivirus cannot detect the downloaded file, it may be detected during Execution of that bad file, but even then it cannot remove the file from WSL2 distro!
-REM For example, LaZagne.exe can be downloaded and executed, and you will get the loot, but the antivirus will detect the execution and kill the processat some point, but you will get all loot and the file will remain in the WSL2 distro                       
-REM In my testings, I got loot with LaZagne and an antivirus could only kill the process when damage was done.
+REM In my testing, LaZagne.exe can be downloaded and executed, you will get the loot, the antivirus will detect the execution and kill the process at some point, but you will get all loot and the file will remain in the WSL2 distro                       
 
 
 REM change to your target language
